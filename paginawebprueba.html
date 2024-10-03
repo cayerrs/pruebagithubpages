@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de matrícula</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #4A90E2;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .emancipado-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .module-group {
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #4A90E2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de matrícula</h2>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido1">Primer apellido:</label>
+                <input type="text" id="apellido1" name="apellido1" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido2">Segundo apellido:</label>
+                <input type="text" id="apellido2" name="apellido2">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="provinciaNacimiento">Provincia de nacimiento:</label>
+                <select id="provinciaNacimiento" name="provinciaNacimiento" required>
+                    <option value="Albacete">Albacete</option>
+                    <option value="Toledo">Toledo</option>
+                    <option value="Ciudad Real">Ciudad Real</option>
+                    <option value="Cuenca">Cuenca</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Emancipado:</label>
+                <div class="emancipado-group">
+                    <input type="radio" id="emancipado_si" name="emancipado" value="si" required>
+                    <label for="emancipado_si">Sí</label>
+                    <input type="radio" id="emancipado_no" name="emancipado" value="no" required>
+                    <label for="emancipado_no">No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Módulos de los que se matricula:</label>
+                <div class="module-group">
+                    <input type="checkbox" id="modulo1" name="modulos" value="servidor">
+                    <label for="modulo1">Desarrollo Web en Entorno Servidor</label>
+                </div>
+                <div class="module-group">
+                    <input type="checkbox" id="modulo2" name="modulos" value="cliente">
+                    <label for="modulo2">Desarrollo Web en Entorno Cliente</label>
+                </div>
+                <div class="module-group">
+                    <input type="checkbox" id="modulo3" name="modulos" value="despliegue">
+                    <label for="modulo3">Despliegue de aplicaciones web</label>
+                </div>
+                <div class="module-group">
+                    <input type="checkbox" id="modulo4" name="modulos" value="interfaces">
+                    <label for="modulo4">Diseño de interfaces web</label>
+                </div>
+                <div class="module-group">
+                    <input type="checkbox" id="modulo5" name="modulos" value="empresa">
+                    <label for="modulo5">Empresa e iniciativa emprendedora</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>
